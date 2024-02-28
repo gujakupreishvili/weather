@@ -35,7 +35,15 @@ input.addEventListener("keypress", (e) => {
         min_temp.textContent = data.minTemp;
         humadity.textContent = data.humidity;
         wind_speed.textContent = data.windSpeed;
+        if (data.currentWeatherDesc === "sunny") {
+          document.body.style.backgroundImage = `url('../img/sun.jpg')`;
+          document.body.style.backgroundSize = "cover"; // or "contain", depending on your needs
+          document.body.style.maxWidth = "740px";
+          document.body.style.minHeight = "400px"; // Set the maximum height here
+          document.body.style.margin = "0 auto"; // Center the background image horizontally
+        }
       })
+
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
