@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Open+Sans:wght@500;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>weather.com</title>
+  </head>
+  <body>
+    <header>
+      <img src="./img/logo.png" alt="logo" class="logo" />
+      <form action="">
+        <input type="text" placeholder="Search Location..." class="input" />
+        <img src="./img/search.png" alt="search" class="search" />
+      </form>
+    </header>
+    <main>
+      <div class="main-information">
+        <h1 class="gradus"><span class="temp">16</span>°</h1>
+        <div class="city-div">
+          <p class="city">London</p>
+          <div class="day-div">
+            <p class="time">06:09</p>
+            <p class="week-day">Monday</p>
+            <p class="data">24</p>
+            <p class="month">Feb</p>
+          </div>
+        </div>
+        <img src="./img/cloudy.png" alt="cloud" class="cloud" />
+      </div>
+    </main>
+    <footer>
+      <div class="about-weather">
+        <form action="" class="desktop-input">
+          <input type="text" placeholder="Search Location..." class="input" />
+          <img src="./img/search.png" alt="search" class="search" />
+        </form>
+        <p class="weather-details">Weather Details...</p>
+        <p class="thunderstorm">thunderstorm with light drizzle</p>
+        <div class="more-info">
+          <div class="more-info-temp">
+            <p>Temp max</p>
+            <div class="tempruter">
+              <p class="max-temp">19°</p>
+              <img src="./img/max temp.png" alt="" class="max-temp" />
+            </div>
+          </div>
+          <div class="more-info-temp">
+            <p>Temp min</p>
+            <div class="tempruter">
+              <p class="min-temp">15°</p>
+              <img src="./img/min temp.png" alt="" class="max-temp" />
+            </div>
+          </div>
+          <div class="more-info-temp">
+            <p>Humadity</p>
+            <div class="tempruter">
+              <p class="humadity">58%</p>
+              <img src="./img/humadity.png" alt="" class="max-temp" />
+            </div>
+          </div>
+          <div class="more-info-temp">
+            <p>Cloudy</p>
+            <div class="tempruter">
+              <p class="cloud">86%</p>
+              <img src="./img/cloudy (2).png" alt="" class="max-temp" />
+            </div>
+          </div>
+          <div class="more-info-temp">
+            <p>Wind</p>
+            <div class="tempruter">
+              <p class="wind-speed">
+                <span class="wind-speed-span">15</span>km/h
+              </p>
+              <img src="./img/wind.png" alt="" class="max-temp" />
+            </div>
+          </div>
+          <hr />
+        </div>
+      </div>
+    </footer>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
