@@ -15,6 +15,9 @@ const proxyUrl = "https://api.allorigins.win/raw?url="; // Use AllOrigins as the
 
 input.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
+    if (input.value === "") {
+      alert(error);
+    }
     e.preventDefault();
     fetch(
       `${proxyUrl}https://lobster-app-kps4x.ondigitalocean.app/api/weather/${input.value}`
@@ -39,6 +42,7 @@ input.addEventListener("keypress", (e) => {
     input.value = "";
   }
 });
+
 const time = new Date();
 const hours = time.getHours();
 const minutes = time.getMinutes();
