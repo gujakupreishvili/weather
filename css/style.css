@@ -93,7 +93,7 @@ main{
   font-weight: 400;
   line-height: normal;
 }
-.desktop-input{
+.about-weather form{
   display: none;
 }
 .about-weather{
@@ -163,4 +163,107 @@ hr{
   margin-top: 40px;
   margin-bottom: 40px;
   border-bottom: 1px solid #FFF;
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  border: 10px solid;
+  box-sizing: border-box;
+  animation: animloader 1s linear infinite alternate;
+  margin: auto;
+}
+.loader-hidden{
+  opacity: 0;
+  visibility: hidden;
+}
+@keyframes animloader {
+  0% {
+    border-color: white rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+  }
+  33% {
+    border-color: white white rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+  }
+  66% {
+    border-color: white white white rgba(255, 255, 255, 0);
+  }
+  100% {
+    border-color: white white white white;
+  }
+} 
+@media(width>=740px){
+  header{
+    padding: 25px 5.4%;
+  }
+  .main-information{
+    padding-left: 5.4%;
+  }
+  .gradus{
+    font-size: 120px;
+  }
+  .city{
+    font-size: 48px;
+  }
+  .day-div p{
+    font-size: 16px;
+  }
+  .weather-details{
+    font-size: 18px;
+    margin-top: 107px;
+    margin-bottom: 52px;
+  }
+  .thunderstorm{
+    font-size: 18px;
+  }
+  .more-info-temp p{
+    font-size: 18px;
+  }
+  .more-info{
+    width: 354px;
+  }
+  input::placeholder{
+    font-size: 18px;
+  }
+  form input{
+    height: 20px;
+  }
+}
+@media(width>=1023px){
+  .about-weather{
+    position: absolute;
+    margin-top: 0px;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    padding-left: 35px;
+    align-items: flex-start;
+    padding-right: 137px;
+  }
+  .weather-details{
+    padding-top: 115px;
+    padding-bottom: 52px;
+    margin-bottom: 0px;
+  }
+  header form{
+    z-index: 2;
+    width: 371px;
+    margin-top: 40px;
+    margin-bottom: 41px;
+    margin-right: 51px;
+  }
+  header form input{
+    font-size: 20px;
+  }
+  .weather-details{
+    margin-top: 0px;
+  }
+  header{
+    padding-left: 117px;
+  }
+  .main-information{
+    padding-left: 117px;
+    padding-bottom: 78px;
+  }
 }
