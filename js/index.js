@@ -30,10 +30,10 @@ function check_weather() {
       humadity.textContent = data.humidity;
       wind_speed.textContent = data.windSpeed;
       if (data.currentWeatherDesc === "sunny") {
-        document.body.style.backgroundImage = `url('../img/thunder.png')`;
+        document.body.style.backgroundImage = `url('../img/rain.png')`;
       }
       if (data.currentWeatherDesc === "rain") {
-        document.body.style.backgroundImage = `url('../img/rain.png')`;
+        document.body.style.backgroundImage = `url('../img/thunder.png')`;
       }
       if (data.currentWeatherDesc === "snowy") {
         document.body.style.backgroundImage = `url('../img/snow.png')`;
