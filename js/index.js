@@ -59,6 +59,7 @@ function check_weather() {
 input.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
     e.preventDefault();
+    input.value = input.value.toLowerCase();
     // const loader = document.querySelector(".loader");
     check_weather();
     // loader.classList.remove("loader-hidden");
