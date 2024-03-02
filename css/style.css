@@ -175,6 +175,10 @@ hr{
   animation: animloader 1s linear infinite alternate;
   margin: auto;
   display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50px -50px);
 }
 .loader-hidden{
   opacity: 0;
