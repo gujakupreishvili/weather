@@ -10,9 +10,11 @@ const min_temp = document.querySelector(".min-temp");
 const humadity = document.querySelector(".humadity");
 const cloud = document.querySelector(".cloud");
 const wind_speed = document.querySelector(".wind-speed-span");
+const loader = document.querySelector(".loader");
 
 const proxyUrl = "https://api.allorigins.win/raw?url="; // Use AllOrigins as the proxy
 function check_weather() {
+  loader.style.display = "block";
   fetch(
     `${proxyUrl}https://lobster-app-kps4x.ondigitalocean.app/api/weather/${input.value}`
   )
@@ -38,29 +40,23 @@ function check_weather() {
       if (data.currentWeatherDesc === "snowy") {
         document.body.style.backgroundImage = `url('../img/snow.png')`;
       }
+      loader.style.display = "none";
     })
 
     .catch((error) => {
       console.error("Error fetching data:", error);
       const input_form = document.querySelector(".input-form");
       input_form.style.borderBottom = "1px solid red";
+      loader.style.display = "none";
     });
   input.value = "";
 }
-
-// window.addEventListener("load", () => {
-//   const loader = document.querySelector(".loader");
-//   loader.classList.add("loader-hidden");
-//   loader.addEventListener("transitionend", () => {
-//     document.body.removeChild("loader");
-//   });
-// });
 
 input.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
     e.preventDefault();
     input.value = input.value.toLowerCase();
-    // const loader = document.querySelector(".loader");
+    // loader.style.display = "block";
     check_weather();
     // loader.classList.remove("loader-hidden");
     // loader.style.display = "none";
